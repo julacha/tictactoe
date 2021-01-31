@@ -6,6 +6,8 @@ let count =0;
 let turn = "Player A";
 for (let cell of cells) {
   cell.addEventListener("click", function () {
+  console.log(this);
+  event.stopPropagation();
   let symbol = document.createElement("div");
   step = step + 1;
   if(step % 2 == "0") {
@@ -29,6 +31,7 @@ for (let cell of cells) {
     symbol.textContent = "X";
   }
   renderGame();
+  this.removeEventListener('click', arguments.callee);
 });
 }
 
