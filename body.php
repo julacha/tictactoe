@@ -1,15 +1,36 @@
 <body>
-    <div class="container">
+
+<form id="request" class="container" action="" method="post" >
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+<input type="button" name="mark" class="square" value=""/></div>
+
+<div id="result"></div>
+<!-- <input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/>
+<input type="button" name="mark" class="square"/> -->
+     <!-- <div class="square cell"></div>
      <div class="square cell"></div>
      <div class="square cell"></div>
      <div class="square cell"></div>
      <div class="square cell"></div>
      <div class="square cell"></div>
      <div class="square cell"></div>
-     <div class="square cell"><pre></pre></div>
-     <div class="square cell"><pre></pre></div>
-     <div class="square cell"><pre></pre></div>
-      </div>
+     <div class="square cell"></div>
+     <div class="square cell"></div> -->
+</form>
+
     <div class="status_container">
         <p id="game_status">Player A goes now</p>
     </div>

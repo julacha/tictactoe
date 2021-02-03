@@ -17,16 +17,26 @@
     align-items: center;
     text-decoration: none;
     } */
-    .cell{
+    .square{
     width: 70px;
     height: 70px;
     margin: 4px;
-    background: rgb(124, 208, 211);
+    color: darkblue;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     }
+    .cell{
+        width: 70px;
+        height: 70px;
+        margin: 4px;
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        }
 
     span{
         display: inline-block;
