@@ -10,19 +10,19 @@ console.log("Start");
     sq.addEventListener("click", function (event) {
       event.preventDefault();
     console.log(sq);
-    //let symbol = document.createElement("div");
     //console.log(div);
     step = step + 1;
     if (sq.innerHTML == ""){
     if(step % 2 == "0") {
-      sq.innerHTML = "0";
+      sq.innerText = "0";
       turn = "Player B ";
       } else {
-      sq.innerHTML = "X";
+      sq.innerText = "X";
       turn = "Player A ";
       }
-    //cell.append(symbol);
+      symbol = sq.innerText;
     result = document.getElementById("result").innerHTML;
+    button = document.getElementById("result").innerHTML;
     // cell.innerHTML;
     //let place = symbol.textContent;
     count++;
