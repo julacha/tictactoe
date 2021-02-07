@@ -1,39 +1,36 @@
 console.log("Start");
-let TicTacToe = function(){
-  let cells = document.querySelectorAll(".square");
+
+  let squares = document.querySelectorAll(".square");
   let status = document.getElementById("game_status");
   let step = 0;
   let count =0;
   let turn = "Player A";
-  for (let cell of cells) {
-    cell.addEventListener("click", function () {
-    console.log(cell);
-    let symbol = document.createElement("div");
+  for (let i = 0; i < squares.length; i++) {
+    const sq = squares[i];
+    sq.addEventListener("click", function (event) {
+      event.preventDefault();
+    console.log(sq);
+    //let symbol = document.createElement("div");
     //console.log(div);
     step = step + 1;
+    if (sq.innerHTML == ""){
     if(step % 2 == "0") {
-      symbol.textContent = "0";
-      } else {
-      symbol.textContent = "X";
-      }
-    cell.append(symbol);
-    result = document.getElementById("result").innerHTML;
-    cell.innerHTML;
-    let place = symbol.textContent;
-    count++;
-    symbol.setAttribute("data-value", count);
-    console.log(place);
-    localStorage.setItem(("["+ count +"]"), place);//"turn"nestradā!
-    localStorage.setItem("data-value", JSON.stringify(count));
-if (cell == ""){
-    if (turn === "Player A "){
+      sq.innerHTML = "0";
       turn = "Player B ";
-      symbol.textContent = "0";
-    }else{
+      } else {
+      sq.innerHTML = "X";
       turn = "Player A ";
-      symbol.textContent = "X";
-    }
-  }
+      }
+    //cell.append(symbol);
+    result = document.getElementById("result").innerHTML;
+    // cell.innerHTML;
+    //let place = symbol.textContent;
+    count++;
+    // symbol.setAttribute("data-value", count);
+    // console.log(place);
+    // localStorage.setItem(("["+ count +"]"), place);//"turn"nestradā!
+    // localStorage.setItem("data-value", JSON.stringify(count));
+}
     renderGame();
     this.removeEventListener('click', arguments.callee);
   });
@@ -42,7 +39,7 @@ if (cell == ""){
   function renderGame(){
   status.textContent =  (turn) + "goes now";
   }
-}
+
 // let cells = document.querySelectorAll(".square");
 // for (let cell of cells) {
 //   cell.addEventListener("click", function () {

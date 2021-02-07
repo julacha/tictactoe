@@ -10,17 +10,14 @@ include "../tictactoe/body.php";
 //header('Content-Type: application/json');
 session_start();
 
+for ($i=1; $i <=9; $i++)
+{
+
+}
+
 const BASE_URL = "http://localhost/tictactoe/";
 
 
-// function update($mark) {
-//     $file_name = '../tictactoe/json_database.json';
-//     file_put_contents($file_name, json_encode($mark));
-//     return json_encode([
-//         'status' => 'success',
-//         'message' => 'data saved'
-//     ]);
-//   }
   function get() {
     $file_name = '../tictactoe/json_database.json';
     if (file_exists($file_name)) {
@@ -31,4 +28,3 @@ const BASE_URL = "http://localhost/tictactoe/";
     }
     return error('DB file does not exist');
 }
-?>
