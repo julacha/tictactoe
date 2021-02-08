@@ -10,8 +10,6 @@
         <input type="submit" name="mark" class="square" id="sq7" value="" />
         <input type="submit" name="mark" class="square" id="sq8" value="" />
         <input type="submit" name="mark" class="square" id="sq9" value="" />
-
-        <div id="result"></div>
         <!-- <input type="button" name="mark" class="square"/>
 <input type="button" name="mark" class="square"/>
 <input type="button" name="mark" class="square"/>
@@ -30,7 +28,7 @@
      <div class="square cell"></div>
      <div class="square cell"></div> -->
     </form>
-
+    <div id="result"></div>
     <div class="status_container">
         <p id="game_status">Player A goes now</p>
     </div>
