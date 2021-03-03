@@ -29,25 +29,26 @@ console.log("Start");
     localStorage.setItem("data-count", JSON.stringify(count));
 }
     renderGame();
+    saveMark();
     this.removeEventListener('click', arguments.callee);
   });
+  }
+  function saveMark(symbol) {
+    localStorage.setItem("mark", JSON.stringify(symbol));
+  
+    $.ajax({
+        method: 'post',
+        url: action,
+        data: {
+          mark:symbol
+        }
+    }).done(function( msg ){
+        console.log( msg );
+    });
   }
 
   function renderGame(){
   status.textContent =  (turn) + "goes now";
   }
 
-let cells = document.querySelectorAll(".square");
-for (let cell of cells) {
-  cell.addEventListener("click", function () {
-    let div = this;
-    //console.log(this);
-    $.ajax({
-      method: div.getAttribute('method'),
-      url: div.getAttribute('action'),
-      data: $(div).serialize()
-  }).done(function (msg) {
-      console.log(msg);
-  });
-});
-}
+

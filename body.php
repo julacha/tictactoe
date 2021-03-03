@@ -1,6 +1,6 @@
 <body>
 
-    <form id="request" class="container" action="" method="post">
+    <form id="request" class="container" action="<?php "http://localhost/tictactoe/test.php" ?>" method="post">
         <input type="submit" name="mark" class="square" id="sq1" value="" />
         <input type="submit" name="mark" class="square" id="sq2" value="" />
         <input type="submit" name="mark" class="square" id="sq3" value="" />
@@ -10,28 +10,13 @@
         <input type="submit" name="mark" class="square" id="sq7" value="" />
         <input type="submit" name="mark" class="square" id="sq8" value="" />
         <input type="submit" name="mark" class="square" id="sq9" value="" />
-        <!-- <input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/>
-<input type="button" name="mark" class="square"/> -->
-        <!-- <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div>
-     <div class="square cell"></div> -->
     </form>
-    <div id="result"></div>
     <div class="status_container">
         <p id="game_status">Player A goes now</p>
     </div>
+    <script>
+        let action = "<?php "http://localhost/tictactoe/test.php" ?>";
+    </script>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
