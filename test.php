@@ -4,9 +4,9 @@ session_start();
 
 
 if (isset($_POST['mark'])) {
-    $file_name = '../json_database.json';
-    file_put_contents($file_name, json_encode(["mark"]));
-    return json_encode([
+    $file_name = 'json_database.json';
+    file_put_contents($file_name, json_encode(["mark" => $_POST['mark']]));
+    echo json_encode([
         'status' => 'success',
         'message' => 'data saved'
     ]);
@@ -22,6 +22,3 @@ function error($msg = 'wrong request')
         'message' => $msg
     ]);
 }
-
-var_dump($_POST);
-//var_dump($_GET);

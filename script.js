@@ -29,7 +29,7 @@ console.log("Start");
     localStorage.setItem("data-count", JSON.stringify(count));
 }
     renderGame();
-    saveMark();
+    saveMark(sq.textContent);
     this.removeEventListener('click', arguments.callee);
   });
   }
@@ -38,7 +38,7 @@ console.log("Start");
   
     $.ajax({
         method: 'post',
-        url: action,
+        url: "test.php" ,
         data: {
           mark:symbol
         }
